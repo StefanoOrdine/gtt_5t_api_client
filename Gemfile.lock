@@ -1,0 +1,56 @@
+PATH
+  remote: .
+  specs:
+    gtt_5t_api_client (0.0.1)
+      nokogiri (~> 1.6.8)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.1)
+    coolline (0.5.0)
+      unicode_utils (~> 1.4)
+    diff-lcs (1.2.5)
+    method_source (0.8.2)
+    mini_portile2 (2.1.0)
+    nokogiri (1.6.8.1)
+      mini_portile2 (~> 2.1.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-coolline (0.2.5)
+      coolline (~> 0.5)
+    pry-nav (0.2.4)
+      pry (>= 0.9.10, < 0.11.0)
+    rake (10.5.0)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.4)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
+    slop (3.6.0)
+    unicode_utils (1.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.13)
+  gtt_5t_api_client!
+  pry
+  pry-coolline
+  pry-nav
+  rake (~> 10.0)
+  rspec (~> 3.0)
+
+BUNDLED WITH
+   1.13.6
