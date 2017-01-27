@@ -1,8 +1,6 @@
 # Gtt5tApiClient
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gtt_5t_api_client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem provides GTT (Gruppo Torinese Trasporti) stop arrivals in real time. Since the 5T (Tecnologie Telematiche Trasporti Traffico Torino) does not provide any public API to retrieve information on real time stop arrivals, I created this gem with the purpose of make easy and pleasing to developers retriving these valuable information. Data are scraped from [Arrivi in Fermata](http://www.5t.torino.it/5t/it/trasporto/arrivi-fermata.jsp) web page of the [official 5T website](http://www.5t.torino.it/).
 
 ## Installation
 
@@ -22,7 +20,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+The module `Gtt5tApiClient` provides a `TimeTable` class that can be used to retrieve arrivals times giving a stop identification number and a `DateTime` object describing the interested moment:
+
+```
+time_table = Gtt5tApiClient::TimeTable.new(64, DateTime.now)
+
+time_table.times
+=> {
+  :"1"=>["20:43*", "20:56*", "21:10*"],
+  :"18"=>["20:42*", "20:54*", "21:02*"],
+  :"24"=>["20:59"],
+  :"35"=>["20:39", "20:55*", "20:56*"],
+  "93B"=>["22:26"]
+}
+```
+
+Times with `*` like `"20:42*"` are in real time. You can also get the stop name by calling
+
+```
+time_table.stop_name
+=> "64 LINGOTTO EXPO"
+```
+
+Enjoy!
 
 ## Development
 
@@ -32,10 +52,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/gtt_5t_api_client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/StefanoOrdine/gtt_5t_api_client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
