@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gtt_5t_api_client (0.0.1)
+    gtt_5t_api_client (1.0.0)
       nokogiri (~> 1.6.8)
 
 GEM
